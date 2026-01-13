@@ -1,47 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap');
+
 :root {
-  --primary-color: #2e7d32; /* Forest Green */
-  --secondary-color: #81c784; /* Light Green */
-  --accent-color: #fdd835; /* Sunny Yellow */
-  --text-color: #1b1b1b;
-  --bg-color: #f1f8e9; /* Light Greenish White */
-  --card-bg: #ffffff;
-  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Elegant Palette */
+  --primary-color: #0C4A23;
+  /* Dark Green */
+  --secondary-color: #1C6331;
+  /* Medium Green */
+  --accent-color: #E4C86C;
+  /* Gold */
+  --accent-dark: #C0A35A;
+  /* Dark Gold/Bronze */
+  --text-color: #322D2B;
+  /* Dark Grey/Black */
+  --bg-color: #FAFAF5;
+  /* Very light cream/off-white for elegance */
+  --card-bg: #FFFFFF;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   background-color: var(--bg-color);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
 a {
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  opacity: 0.8;
+  color: var(--accent-color);
 }
 
 button {
   background-color: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 0.6em 1.2em;
+  color: var(--accent-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.8em 1.5em;
+  /* Slightly more padding for elegance */
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
+  font-weight: 600;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   cursor: pointer;
-  transition: background-color 0.25s;
-  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  /* Less rounded for elegance */
 }
 
 button:hover {
-  background-color: #1b5e20;
+  background-color: var(--text-color);
+  border-color: var(--text-color);
+  color: #fff;
 }
 
 /* Utilities */
